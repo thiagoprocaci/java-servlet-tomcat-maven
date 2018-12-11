@@ -1,25 +1,20 @@
 package com.tbp.service;
 
+import com.tbp.repository.Liquor;
+import com.tbp.repository.LiquorRepository;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class LiquorService {
 
     public List<String> getAvaliableBrands(String type) {
-        List<String> brands = new ArrayList<String>();
-
-        if("WINE".equals(type)){
-            brands.add("Adrianna Vineyard");
-            brands.add(("J. P. Chenet"));
-        } else if("WHISKY".equals(type)){
-            brands.add("Glenfiddich");
-            brands.add("Johnnie Walker");
-        } else if("BEER".equals(type)){
-            brands.add("Corona");
-        } else {
-            brands.add("No Brand Available");
+        LiquorRepository liquorRepository = new LiquorRepository();
+        Liquor liquor = liquorRepository.findByType(type);
+        if(liquor != null) {
+            return liquor.getBrandList();
         }
-        return brands;
+        return new ArrayList<String>();
     }
 
 }

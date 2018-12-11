@@ -24,13 +24,17 @@ public class SelectLiquorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String liquorType = req.getParameter("Type");
         LiquorService liquorService = new LiquorService();
-
         List<String> liquorBrands = liquorService.getAvaliableBrands(liquorType);
         req.setAttribute("brands", liquorBrands);
         RequestDispatcher view = req.getRequestDispatcher("/liquor/list.jsp");
         view.forward(req, resp);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        super.doPut(req, resp);
     }
 }

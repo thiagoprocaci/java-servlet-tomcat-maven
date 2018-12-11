@@ -19,6 +19,9 @@ public class SelectLiquorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        LiquorService liquorService = new LiquorService();
+        List<String> types = liquorService.getTypes();
+        req.setAttribute("types", types);
         req.getRequestDispatcher("/liquor/select.jsp").forward(req, resp);
     }
 
@@ -32,9 +35,5 @@ public class SelectLiquorServlet extends HttpServlet {
         view.forward(req, resp);
     }
 
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        super.doPut(req, resp);
-    }
 }

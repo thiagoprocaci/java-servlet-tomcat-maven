@@ -35,5 +35,9 @@ public class LiquorRepository {
         return null;
     }
 
+    public List<Liquor> findAll() {
+        return liquorList;
+    }
+
 
 }

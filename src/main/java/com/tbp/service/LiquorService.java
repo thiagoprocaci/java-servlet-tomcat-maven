@@ -17,4 +17,14 @@ public class LiquorService {
         return new ArrayList<String>();
     }
 
+    public List<String> getTypes() {
+        LiquorRepository liquorRepository = new LiquorRepository();
+        List<Liquor> all = liquorRepository.findAll();
+        ArrayList<String> typeList = new ArrayList<String>();
+        for(Liquor l : all) {
+            typeList.add(l.getType());
+        }
+        return typeList;
+    }
+
 }

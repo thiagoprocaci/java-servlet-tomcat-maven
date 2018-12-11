@@ -1,4 +1,4 @@
-
+<%@ page import ="java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +13,14 @@
     <form method="post" action="<%=request.getContextPath()%>/liquor/SelectLiquor">
        <br>
         <select name="Type" size="1">
-            <option>WINE</option>
-            <option>WHISKY</option>
-            <option>BEER</option>
+          <%
+           List result = (List) request.getAttribute("types");
+           Iterator it = result.iterator();
+            while(it.hasNext()){
+                    out.println("<option>" + it.next() + "</option>");
+            }
+
+           %>
 
         </select>
         <br><br>

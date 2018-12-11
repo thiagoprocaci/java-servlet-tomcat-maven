@@ -14,11 +14,10 @@
        <br>
         <select name="Type" size="1">
           <%
-           List result = (List) request.getAttribute("types");
-           Iterator it = result.iterator();
-            while(it.hasNext()){
-                    out.println("<option>" + it.next() + "</option>");
-            }
+           List<String> result = (List<String>) request.getAttribute("types");
+           for(String type : result) {
+             out.println("<option>" + type + "</option>");
+           }
 
            %>
 

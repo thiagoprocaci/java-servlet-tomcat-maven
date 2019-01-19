@@ -39,5 +39,11 @@ public class LiquorRepository {
         return liquorList;
     }
 
+    public void save(String type, String brand) {
+        Liquor liquor = new Liquor(type);
+        liquor.getBrandList().add(brand);
+        liquorList.add(liquor);
+    }
+
 
 }

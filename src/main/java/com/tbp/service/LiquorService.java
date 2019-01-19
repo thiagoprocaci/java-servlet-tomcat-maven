@@ -27,4 +27,9 @@ public class LiquorService {
         return typeList;
     }
 
+    public void saveLiquor(String type, String brand) {
+        LiquorRepository liquorRepository = new LiquorRepository();
+        liquorRepository.save(type, brand);
+    }
+
 }

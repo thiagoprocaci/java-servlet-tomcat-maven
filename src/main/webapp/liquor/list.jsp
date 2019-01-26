@@ -14,5 +14,6 @@
         out.println(it.next()+"<br>");
     }
     %>
+</center>
 </body>
 </html>

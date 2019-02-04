@@ -1,0 +1,39 @@
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+
+h1 {
+      font-family: verdana;
+  }
+
+
+ body {
+   background-color: #e6ddad61;
+ }
+
+ /* unvisited link */
+ a:link {
+   color: red;
+ }
+
+ /* visited link */
+ a:visited {
+   color: green;
+ }
+
+ /* mouse over link */
+ a:hover {
+   color: hotpink;
+ }
+
+ /* selected link */
+ a:active {
+   color: blue;
+ }

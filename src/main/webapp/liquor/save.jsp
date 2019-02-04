@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Liquor Store</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 <center>

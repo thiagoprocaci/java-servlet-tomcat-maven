@@ -6,14 +6,7 @@
 <html>
     <body>
 
-        <h2>Lista de Usuários</h2>
-        <%
-            List<Usuario> usuarios = (List<Usuario>) request.getAttribute("usuarioList");
-            for(Usuario u : usuarios) {
-                out.println(u.getNome() + "<br><br>");
-            }
 
-        %>
 
     </body>
 </html>

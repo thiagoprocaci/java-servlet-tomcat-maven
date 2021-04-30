@@ -1,16 +1,17 @@
 <%@ page import ="java.util.*" %>
+<%@ page import ="com.tbp.model.Prato" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <body>
 <center>
     <h1>
-        Available Brands
+        Pratos do cardapio
     </h1>
     <%
-        List result = (List) request.getAttribute("brands");
+        List<Prato> result = (List<Prato>) request.getAttribute("pratoList");
         Iterator it = result.iterator();
-        out.println("<br>We have <br><br>");
+        out.println("<br>Temos os pratos <br><br>");
         while(it.hasNext()) {
             out.println(it.next() + "<br>");
         }

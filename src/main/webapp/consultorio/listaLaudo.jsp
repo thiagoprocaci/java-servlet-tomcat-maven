@@ -5,17 +5,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Consultório</title>
 </head>
 <body>
-<center>
+<div class="container p-3">
     <h1>
         <%
             Paciente paciente = (Paciente) request.getAttribute("paciente");
         %>
         Laudos do Paciente <%=paciente.getNome()%>
     </h1>
-    <table>
+    <br>
+    <table class="table">
         <tr>
             <th>Médico</th>
             <th>Descrição</th>
@@ -34,7 +36,7 @@
      %>
     </table>
 
-</center>
+</div>
 
 
 </body>

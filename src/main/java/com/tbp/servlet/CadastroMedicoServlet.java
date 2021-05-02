@@ -20,18 +20,11 @@ public class CadastroMedicoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/consultorio/medico.jsp");
-        requestDispatcher.forward(req, resp);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cpf = req.getParameter("cpf");
-        String nome = req.getParameter("nome");
-        String crm = req.getParameter("crm");
-        consultorioService.salvarMedico(cpf, nome, crm);
-        req.setAttribute("mensagem", "Medico salvo com sucesso");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/consultorio/medico.jsp");
-        requestDispatcher.forward(req, resp);
+
     }
 }

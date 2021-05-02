@@ -21,10 +21,6 @@ public class ListarLaudoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Integer idPaciente = Integer.parseInt(req.getParameter("idPaciente"));
-        Paciente paciente = consultorioService.obterPacientePorId(idPaciente);
-        req.setAttribute("paciente", paciente);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/consultorio/listaLaudo.jsp");
-        requestDispatcher.forward(req, resp);
+
     }
 }

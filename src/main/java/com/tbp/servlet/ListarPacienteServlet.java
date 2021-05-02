@@ -22,9 +22,6 @@ public class ListarPacienteServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Paciente> pacienteList = consultorioService.listarPacientes();
-        req.setAttribute("pacienteList", pacienteList);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/consultorio/listaPaciente.jsp");
-        requestDispatcher.forward(req, resp);
+
     }
 }
